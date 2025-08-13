@@ -10,9 +10,10 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <meta name="theme-color" content="#111827" />
   </head>
   <body>
     <!-- Navigation -->
@@ -70,7 +71,8 @@
             Hi, I'm <span class="highlight">Yash Kuletha</span>
           </h1>
           <p class="hero-subtitle">
-            An AI/ML enthusiast, passionate about data science, digital design, and continuous learning.
+            An AI/ML enthusiast, passionate about data science, digital design,
+            and continuous learning.
           </p>
           <p class="hero-description">
             I have a curious relationship with technology — it never fails to
@@ -335,77 +337,63 @@
     <section id="experience" class="experience">
       <div class="container">
         <h2 class="section-title">Experience</h2>
-        <div class="experience-timeline">
-          <div class="experience-item">
-            <div class="experience-date">
-              <span class="date">June 2025 - July 2025</span>
-            </div>
-            <div class="experience-content">
+        <div class="experience-tree">
+          <div class="trunk"></div>
+
+          <div class="branch left">
+            <span class="node-dot"></span>
+            <div class="card">
+              <div class="meta">
+                <span class="date">June 2025 - July 2025</span>
+                <span class="company">Prodigy Infortech</span>
+              </div>
               <h3>Generative AI Intern</h3>
-              <h4>Prodigy Infortech</h4>
               <p>
-                Worked on cutting-edge AI/ML projects including Generative AI
-                applications and Neural Style Transfer. Developed web
-                applications using FastAPI, Flask, and modern frontend
-                technologies. Collaborated with the development team to create
-                innovative solutions using Stable Diffusion and TensorFlow.
+                Worked on Generative AI apps and Neural Style Transfer. Built
+                web apps using FastAPI/Flask and collaborated on Stable
+                Diffusion and TensorFlow solutions.
               </p>
-              <div class="experience-tech">
-                <span>Python</span>
-                <span>FastAPI</span>
-                <span>Flask</span>
-                <span>TensorFlow</span>
-                <span>Stable Diffusion</span>
-                <span>HTML/CSS/JS</span>
+              <div class="tags">
+                <span>Python</span><span>FastAPI</span><span>Flask</span>
+                <span>TensorFlow</span><span>Stable Diffusion</span>
               </div>
             </div>
           </div>
 
-          <div class="experience-item">
-            <div class="experience-date">
-              <span class="date">May 2024 - July 2024</span>
-            </div>
-            <div class="experience-content">
+          <div class="branch right">
+            <span class="node-dot"></span>
+            <div class="card">
+              <div class="meta">
+                <span class="date">May 2024 - July 2024</span>
+                <span class="company">L&T Technology Services</span>
+              </div>
               <h3>Automation and Analytics Intern</h3>
-              <h4>L&T Technology Services</h4>
               <p>
-                Developed a Resume Analyzing application using Microsoft Power
-                Apps and Power Automate to streamline candidate screening,
-                integrating it with Power BI to visualize key metrics on a
-                centralized dashboard for real-time insights. This project
-                provided hands-on experience with the Microsoft Power Platform,
-                enabling automation of workflows and enhancing data-driven
-                decision-making.
+                Built Resume Analyzer in Power Apps + Automate, visualized KPIs
+                in Power BI; automated workflows and improved insight delivery.
               </p>
-              <div class="experience-tech">
-                <span>Power Bi</span>
-                <span>Power Apps</span>
+              <div class="tags">
+                <span>Power BI</span><span>Power Apps</span>
                 <span>Power Automate</span>
               </div>
             </div>
           </div>
 
-          <div class="experience-item">
-            <div class="experience-date">
-              <span class="date">August 2024 - May 2024</span>
-            </div>
-            <div class="experience-content">
+          <div class="branch left">
+            <span class="node-dot"></span>
+            <div class="card">
+              <div class="meta">
+                <span class="date">Aug 2024 - May 2024</span>
+                <span class="company">NIIT University</span>
+              </div>
               <h3>Design Club Coordinator</h3>
-              <h4>NIIT University</h4>
               <p>
-                As the Design Club Coordinator at my university, I organized
-                multiple workshops covering a range of design tools including
-                Blender, Photoshop, and Premiere Pro. During my tenure, I also
-                successfully hosted a university-wide design competition as part
-                of our annual tech fest, Sinusoid, encouraging creativity and
-                hands-on learning among participants.
+                Organized workshops for Blender, Photoshop, Premiere Pro and led
+                a university-wide design competition at Sinusoid.
               </p>
-              <div class="experience-tech">
-                <span>Adobe Photoshop</span>
-                <span>Blender</span>
-                <span>Adobe Premier Pro</span>
-                <span>Team management</span>
-                <span>Leadership</span>
+              <div class="tags">
+                <span>Photoshop</span><span>Blender</span>
+                <span>Premiere Pro</span><span>Leadership</span>
               </div>
             </div>
           </div>
@@ -696,8 +684,12 @@
               </div>
             </div>
             <div class="social-links">
-              <a href="https://github.com/Gitgo012" class="social-link"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/yash-kuletha/" class="social-link"
+              <a href="https://github.com/Gitgo012" class="social-link"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/yash-kuletha/"
+                class="social-link"
                 ><i class="fab fa-linkedin"></i
               ></a>
             </div>
@@ -728,15 +720,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <p>&copy; 2025 Yash Kuletha. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js"></script>

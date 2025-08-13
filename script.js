@@ -35,27 +35,14 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Navbar background change on scroll
+// Navbar background change on scroll (class toggle only; styles via CSS)
 window.addEventListener("scroll", () => {
   const navbar = document.querySelector(".navbar");
-  const currentTheme = document.documentElement.getAttribute("data-theme");
-
+  if (!navbar) return;
   if (window.scrollY > 100) {
-    if (currentTheme === "dark") {
-      navbar.style.background = "rgba(15, 23, 42, 0.98)";
-      navbar.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.3)";
-    } else {
-      navbar.style.background = "rgba(255, 255, 255, 0.98)";
-      navbar.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.1)";
-    }
+    navbar.classList.add("scrolled");
   } else {
-    if (currentTheme === "dark") {
-      navbar.style.background = "rgba(15, 23, 42, 0.95)";
-      navbar.style.boxShadow = "none";
-    } else {
-      navbar.style.background = "rgba(255, 255, 255, 0.95)";
-      navbar.style.boxShadow = "none";
-    }
+    navbar.classList.remove("scrolled");
   }
 });
 
@@ -396,8 +383,13 @@ function getCurrentTheme() {
 
 // Initialize theme
 function initializeTheme() {
-  const currentTheme = getCurrentTheme();
-  setTheme(currentTheme);
+  const saved = localStorage.getItem("theme");
+  if (saved === "light" || saved === "dark") {
+    setTheme(saved);
+  } else {
+    // respect system preference initially
+    setTheme(getCurrentTheme());
+  }
 }
 
 // Toggle theme
