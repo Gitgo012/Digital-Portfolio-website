@@ -349,7 +349,7 @@ body {
 
 .btn-primary {
   background: linear-gradient(90deg, var(--accent-2), var(--accent-1));
-  color: var(--text-primary);
+  color: white;
 }
 
 .btn-primary:hover {
@@ -360,7 +360,7 @@ body {
 
 .btn-secondary {
   background: linear-gradient(90deg, var(--accent-2), var(--accent-1));
-  color: var(--text-primary);
+  color: white;
   border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
