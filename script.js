@@ -267,7 +267,7 @@ const preloaderStyles = `
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(180deg, #0b1020 0%, #0f172a 100%);
         display: flex;
         justify-content: center;
         align-items: center;

@@ -76,7 +76,7 @@ body {
   z-index: 1000;
   padding: 1rem 0;
   transition: all 0.3s ease;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid var(--border-color);
   box-shadow: none;
 }
 
@@ -84,34 +84,7 @@ body {
   box-shadow: 0 10px 30px var(--navbar-shadow);
 }
 
-/* Divider between navbar and hero */
-.hero::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(0, 0, 0, 0.08) 20%,
-    rgba(0, 0, 0, 0.12) 50%,
-    rgba(0, 0, 0, 0.08) 80%,
-    transparent 100%
-  );
-}
-
-[data-theme="dark"] .hero::after {
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.06) 20%,
-    rgba(255, 255, 255, 0.12) 50%,
-    rgba(255, 255, 255, 0.06) 80%,
-    transparent 100%
-  );
-}
+/* Clean separation between navbar and content via border on navbar */
 
 .nav-container {
   max-width: 1200px;
@@ -376,7 +349,7 @@ body {
 
 .btn-primary {
   background: linear-gradient(90deg, var(--accent-2), var(--accent-1));
-  color: #0b1020;
+  color: var(--text-primary);
 }
 
 .btn-primary:hover {
@@ -386,7 +359,7 @@ body {
 }
 
 .btn-secondary {
-  background: transparent;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent-1));
   color: var(--text-primary);
   border: 2px solid rgba(255, 255, 255, 0.2);
 }
